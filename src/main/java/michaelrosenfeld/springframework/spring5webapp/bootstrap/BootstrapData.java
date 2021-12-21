@@ -28,7 +28,9 @@ public class BootstrapData implements CommandLineRunner {
 
         Author michael = new Author("Michael", "Rosenfeld");
         Book myBook = new Book("Best Book", "21345231");
-        Publisher ign = new Publisher("IGN", "Somewhere in CA, 13469 CA");
+        Publisher ign = new Publisher("IGN", "Random street 22B", "Seattle",
+                "Houston", "12345");
+
         michael.getBooks().add(myBook);
 
         authorRepository.save(michael);
