@@ -13,14 +13,29 @@ public class Publisher {
     private Long id;
 
     private String name;
-    private String address;
+    private String addressLineOne;
+    private String city;
+    private String state;
+    private String zip;
 
     public Publisher() {
     }
 
-    public Publisher(String name, String address) {
+
+    public Publisher(String name, String addressLineOne, String city, String state, String zip) {
         this.name = name;
-        this.address = address;
+        this.addressLineOne = addressLineOne;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -31,12 +46,36 @@ public class Publisher {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getAddressLineOne() {
+        return addressLineOne;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAddressLineOne(String addressLineOne) {
+        this.addressLineOne = addressLineOne;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZip() {
+        return zip;
+    }
+
+    public void setZip(String zip) {
+        this.zip = zip;
     }
 
     @Override
@@ -44,7 +83,10 @@ public class Publisher {
         return "Publisher{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
+                ", addressLineOne='" + addressLineOne + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
                 '}';
     }
 
